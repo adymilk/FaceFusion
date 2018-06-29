@@ -44,7 +44,7 @@ $man_rand_num = rand(0,count($woManDesc)-1);
     <body>
       <img src='data:image/png;base64,$photo' style='max-width: 100%;'>
       
-      <p style='padding: 10px; font-size: 1.3rem; color:#985'><strong style='color:#000'>AI分析：</strong>
+      <p style='padding: 10px; font-size: 1.1rem; color:#985'><strong style='color:#000'>AI分析：</strong>
       <script>
         var isWoman = localStorage.isWoman;
         if(isWoman){

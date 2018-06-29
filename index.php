@@ -66,7 +66,7 @@ echo "
         left: 40%;
         height: 64px;
         width: 64px;
-        background:url('./upload/submit suc.png') no-repeat center;
+        background:url('./upload/submit.png') no-repeat center;
     }
   </style>
 </head>
