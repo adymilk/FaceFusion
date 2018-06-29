@@ -12,6 +12,10 @@ echo "
   <link rel='stylesheet' href='https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css'>
 
   <style>
+  *{
+  margin: 0;
+  padding: 0;
+}
     html, body {
       position: relative;
       height: 100%;
@@ -202,14 +206,14 @@ function validate_img(ele){
         $('.submit').hide();
         });
 }
-var isWoman = confirm('你是小姐姐吗？');
-if (isWoman){
-    localStorage.isWoman='true';
+// var isWoman = confirm('你是小姐姐吗？');
+// if (isWoman){
+//     localStorage.isWoman='true';
 
-  }else{
-    localStorage.isWoman='false';
-  }
-  console.log(localStorage.isWoman)
+//   }else{
+//     localStorage.isWoman='false';
+//   }
+//   console.log(localStorage.isWoman)
 </script>
   
 </body>
