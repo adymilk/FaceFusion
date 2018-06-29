@@ -31,7 +31,7 @@ $man_rand_num = rand(0,count($woManDesc)-1);
     echo "<!DOCTYPE html>
     <html>
     <head>
-      <title>图片制作完成-腾讯AI人工智能带你走进古代</title>
+      <title>变身成功-分享给你的小伙伴吧</title>
       <style>
       *{
       margin:0;

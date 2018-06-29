@@ -6,7 +6,7 @@ echo "
 <html lang='en'>
 <head>
   <meta charset='utf-8'>
-  <title>看看你在古代长什么样？-腾讯AI人工智能带你走进古代</title>
+  <title>看看你在古代长什么样？-AI人工智能带你走进古代</title>
   <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'>
 
   <link rel='stylesheet' href='https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css'>
@@ -38,7 +38,7 @@ echo "
       font-size: 18px;
       background:url('./upload/bg.jpg') no-repeat;
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
@@ -161,7 +161,7 @@ echo "
     <div class='swiper-button-next'></div>
     <div class='swiper-button-prev'></div>
 
-    <h3 style='position:absolute; top: 5px; z-index: 999; left: 30%;'>选择你喜欢的类型</h3>
+    <h3 style='position:absolute; top: 5px; z-index: 999; width: 100%; text-align: center; top: 10%;'>选择你喜欢的类型</h3>
   </div>
 
   <script src='https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js'></script>
