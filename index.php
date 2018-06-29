@@ -65,6 +65,7 @@ echo "
         background-color: white;
     }
     .submit{
+      display: none;
         border: unset;
         position: absolute;
         bottom: 80px;
@@ -79,6 +80,44 @@ echo "
   <!-- Swiper -->
   <div class='swiper-container'>
     <div class='swiper-wrapper'>
+
+    <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/10.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div> 
+        <input type='hidden' name='model' value='10'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+      
+    <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/3.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='3'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/4.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='4'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
       <div class='swiper-slide'>
         <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/5.png'>
         <form action='doUpload.php' method='post'
@@ -134,17 +173,7 @@ echo "
         <input type='submit' name='submit' value='' class='submit'/>
         </form>
       </div>
-      <div class='swiper-slide'>
-        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/10.png'>
-        <form action='doUpload.php' method='post'
-        enctype='multipart/form-data'>
-        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
-        <div class='input_bg'></div> 
-        <input type='hidden' name='model' value='10'>
-        <br />
-        <input type='submit' name='submit' value='' class='submit'/>
-        </form>
-      </div>
+      
       <div class='swiper-slide'>
         <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/11.png'>
         <form action='doUpload.php' method='post'
@@ -156,6 +185,121 @@ echo "
         <input type='submit' name='submit' value='' class='submit'/>
         </form>
       </div>
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/27.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='27'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/28.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='28'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/32.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='32'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/34.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='34'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/41.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='42'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/47.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='47'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/48.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='48'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/49.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='49'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/50.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='50'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+
+
+        
     </div>
     <!-- Add Arrows -->
     <div class='swiper-button-next'></div>
