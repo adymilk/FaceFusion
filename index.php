@@ -1,111 +1,221 @@
 <?php 
+header("Content-type: text/html; charset=utf-8");
 
+echo "
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>看看你在古代长什么样？-腾讯AI人工智能带你走进古代</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'>
 
+  <link rel='stylesheet' href='https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css'>
 
-// 图片base64编码
-$path   = './images/test.jpg';
-$data   = file_get_contents($path);
-$base64 = base64_encode($data);
-
-var_dump($base64);
-// 设置请求数据
-$appkey = 'DclNhNeDCgWy0uLB';
-$params = array(
-    'app_id'     => '1107004608',
-    'image'      => $base64,
-    'model'      => '1',
-    'time_stamp' => strval(time()),
-    'nonce_str'  => strval(rand()),
-    'sign'       => '',
-);
-$params['sign'] = getReqSign($params, $appkey);
-
-// 执行API调用
-$url = 'https://api.ai.qq.com/fcgi-bin/ptu/ptu_facemerge';
-$response = doHttpPost($url, $params);
-var_dump($response);
-
-// getReqSign ：根据 接口请求参数 和 应用密钥 计算 请求签名
-// 参数说明
-//   - $params：接口请求参数（特别注意：不同的接口，参数对一般不一样，请以具体接口要求为准）
-//   - $appkey：应用密钥
-// 返回数据
-//   - 签名结果
-function getReqSign($params /* 关联数组 */, $appkey /* 字符串*/)
-{
-    // 1. 字典升序排序
-    ksort($params);
-
-    // 2. 拼按URL键值对
-    $str = '';
-    foreach ($params as $key => $value)
-    {
-        if ($value !== '')
-        {
-            $str .= $key . '=' . urlencode($value) . '&';
-        }
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide{
+      text-align: center;
+      font-size: 18px;
+      background:url('./upload/bg.jpg') no-repeat;
+      background-position: center;
+      background-size: contain;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
     }
 
-    // 3. 拼接app_key
-    $str .= 'app_key=' . $appkey;
+    .input,.input_bg{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .input_bg{
+        width: 100%;
+        height: 200px;
+        background:url('./upload/Upload.png') no-repeat center;
+        background-color: white;
+    }
+    .submit{
+        border: unset;
+        position: absolute;
+        bottom: 80px;
+        left: 40%;
+        height: 64px;
+        width: 64px;
+        background:url('./upload/submit suc.png') no-repeat center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class='swiper-container'>
+    <div class='swiper-wrapper'>
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/5.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='5'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/6.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div>
+        <input type='hidden' name='model' value='6'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/7.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/>
+        <div class='input_bg'></div> 
+        <input type='hidden' name='model' value='7'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/8.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div> 
+        <input type='hidden' name='model' value='8'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/9.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div> 
+        <input type='hidden' name='model' value='9'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/10.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
+        <div class='input_bg'></div> 
+        <input type='hidden' name='model' value='10'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+      <div class='swiper-slide'>
+        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/11.png'>
+        <form action='doUpload.php' method='post'
+        enctype='multipart/form-data'>
+        <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/>
+        <div class='input_bg'></div>  
+        <input type='hidden' name='model' value='11'>
+        <br />
+        <input type='submit' name='submit' value='' class='submit'/>
+        </form>
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class='swiper-button-next'></div>
+    <div class='swiper-button-prev'></div>
 
-    // 4. MD5运算+转换大写，得到请求签名
-    $sign = strtoupper(md5($str));
-    return $sign;
+    <h3 style='position:absolute; top: 5px; z-index: 999; left: 30%;'>选择你喜欢的类型</h3>
+  </div>
+
+  <script src='https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js'></script>
+<script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+
+  <script>
+
+  $('.submit,.input').hide();
+  $('.input_bg').click(function(){
+    $('.swiper-slide-active .input').click();
+    });
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+//限制上传文件的类型和大小
+function validate_img(ele){
+    // 返回 KB，保留小数点后两位
+    //alert((ele.files[0].size/(1024*1024)).toFixed(2));
+    var file = ele.value;
+          
+    if(!/.(jpg|jpeg|png|JPG)$/.test(file)){
+              
+      alert('图片类型必须是jpeg,jpg,png中的一种');
+           return false;
+           
+     }else{
+              
+         //返回Byte(B),保留小数点后两位
+        if(((ele.files[0].size).toFixed(2))>=(0.5*1024*1024)){
+                 
+          alert('请上传小于500KB的图片');
+                 return false;
+         }
+     }
+          // alert('图片通过');
+      $('.input,.input_bg').hide();
+      $('.submit').show();
+      $('.submit').click(function(){
+        $('.submit').hide();
+        });
 }
+var isWoman = confirm('你是小姐姐吗？');
+if (isWoman){
+    localStorage.isWoman='true';
 
+  }else{
+    localStorage.isWoman='false';
+  }
+  console.log(localStorage.isWoman)
+</script>
+  
+</body>
+</html>
+";
 
-// doHttpPost ：执行POST请求，并取回响应结果
-// 参数说明
-//   - $url   ：接口请求地址
-//   - $params：完整接口请求参数（特别注意：不同的接口，参数对一般不一样，请以具体接口要求为准）
-// 返回数据
-//   - 返回false表示失败，否则表示API成功返回的HTTP BODY部分
-function doHttpPost($url, $params)
-{
-    $curl = curl_init();
-
-    $response = false;
-    do
-    {
-        // 1. 设置HTTP URL (API地址)
-        curl_setopt($curl, CURLOPT_URL, $url);
-
-        // 2. 设置HTTP HEADER (表单POST)
-        $head = array(
-            'Content-Type: application/x-www-form-urlencoded'
-        );
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $head);
-
-        // 3. 设置HTTP BODY (URL键值对)
-        $body = http_build_query($params);
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $body);
-
-        // 4. 调用API，获取响应结果
-        curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_NOBODY, false);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, true);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-        $response = curl_exec($curl);
-        if ($response === false)
-        {
-            $response = false;
-            break;
-        }
-
-        $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-        if ($code != 200)
-        {
-            $response = false;
-            break;
-        }
-    } while (0);
-
-    curl_close($curl);
-    return $response;
-}
 
 
 
