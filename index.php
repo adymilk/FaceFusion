@@ -33,6 +33,7 @@ echo "
       height: 100%;
     }
     .swiper-slide{
+      background-color: red;
       text-align: center;
       font-size: 18px;
       background:url('./upload/bg.jpg') no-repeat;
