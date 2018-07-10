@@ -82,7 +82,7 @@ echo "
     <div class='swiper-wrapper'>
 
     <div class='swiper-slide'>
-        <img src='https://yyb.gtimg.com/aiplat/ai/upload/doc/facemerge/10.png'>
+        <img src='http://oe3vwrk94.bkt.clouddn.com/Face10.jpg'>
         <form action='doUpload.php' method='post'
         enctype='multipart/form-data'>
         <input type='file' name='file' id='file' class='input' accept='image/jpeg,image/jpg,image/png' onchange='Javascript:validate_img(this);'/> 
